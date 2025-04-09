@@ -1,0 +1,15 @@
+
+{
+  "name": "quiz-paises",
+  "version": "1.0.0",
+  "description": "Juego de preguntas sobre países usando REST Countries API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
