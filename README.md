@@ -39,4 +39,13 @@ Aplicación interactiva de preguntas sobre países, construida con HTML, CSS y J
 ---
 
 ## 🗂 Estructura
-
+quiz-paises/
+├── public/
+│ ├── index.html
+│ ├── script.js
+│ └── styles.css
+├── data/
+│ └── ranking.json
+├── server.js
+├── package.json
+├── README.md
