@@ -149,3 +149,21 @@ function reiniciarJuego() {
   siguientePregunta();
 }
 
+function verRanking() {
+  fetch("/ranking")
+    .then(res => res.json())
+    .then(data => {
+      const rankingDiv = document.getElementById("ranking");
+      if (!data.length) {
+        rankingDiv.innerHTML = "<p>No hay partidas registradas aún.</p>";
+      } else {
+        let html = "<h3 class='title'>🏆 Ranking de Partidas</h3><ol class='text-left'>";
+        data.forEach((p, i) => {
+          html += `<li><strong>#${i + 1}</strong> ${p.nombre} - ${p.puntaje} pts, ${p.correctas} correctas, ${p.tiempoTotal}s</li>`;
+        });
+        html += "</ol>";
+        rankingDiv.innerHTML = html;
+      }
+      rankingDiv.classList.remove("hidden");
+    });
+}
