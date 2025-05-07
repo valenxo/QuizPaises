@@ -13,6 +13,7 @@ const RANKING_PATH = path.join(__dirname, "data", "ranking.json");
 app.post("/ranking", (req, res) => {
   const partida = req.body;
   partida.fecha = new Date().toISOString();
+  console.log("📩 Recibido:", partida); // LOG
 
   let ranking = [];
   if (fs.existsSync(RANKING_PATH)) {
@@ -28,8 +29,11 @@ app.post("/ranking", (req, res) => {
 
   ranking = ranking.slice(0, 20);
   fs.writeFileSync(RANKING_PATH, JSON.stringify(ranking, null, 2));
+  console.log("✅ Ranking actualizado:", ranking); // LOG
+
   res.status(200).json({ ok: true });
 });
+
 
 app.get("/ranking", (req, res) => {
   if (!fs.existsSync(RANKING_PATH)) return res.json([]);
