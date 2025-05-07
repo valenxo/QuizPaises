@@ -1,21 +1,42 @@
+# 🌍 Quiz Países
 
-# Quiz Países 🌍
+Aplicación interactiva de preguntas sobre países, construida con HTML, CSS y JavaScript puro, utilizando la API de REST Countries. Incluye backend con Express.js para registrar el ranking de partidas.
 
-Juego interactivo de preguntas sobre países usando la API de [REST Countries](https://restcountries.com/).
+🎮 ¡Responde 10 preguntas aleatorias sobre capitales, banderas y fronteras de países del mundo!
 
-## Funcionalidades
+---
 
-- 3 tipos de preguntas aleatorias (capital, bandera, fronteras)
-- Puntuación basada en tipo de pregunta
-- Feedback inmediato en cada respuesta
-- Ranking de mejores partidas (top 20)
-- Tiempos y estadísticas al finalizar
-- Estilo visual atractivo con CSS personalizado
+## 🚀 Enlace en línea
 
-## Cómo ejecutar
+👉 Accede al juego desde:  
+🔗 [https://quiz-paises.onrender.com](https://quizpaises-9bqt.onrender.com)
 
-1. Clona el repositorio
-2. Ejecuta `npm install`
-3. Luego `npm start`
-4. Abre `http://localhost:3000` en tu navegador
+---
+
+## 🧩 Funcionalidades
+
+✔️ Tres tipos de preguntas:
+
+- ¿Cuál es el país de la capital "X"? (3 puntos)  
+- ¿Qué país está representado por esta bandera? (5 puntos)  
+- ¿Cuántos países limítrofes tiene X? (3 puntos)
+
+✔️ Cuatro opciones por pregunta  
+✔️ Indicación si la respuesta fue correcta o incorrecta  
+✔️ Se muestra la respuesta correcta si fallás  
+✔️ Resumen al final: puntaje, tiempo total y promedio  
+✔️ Ranking de las mejores partidas (guardado en servidor)
+
+---
+
+## 🛠 Tecnologías usadas
+
+- HTML + CSS (estilo con clases Tailwind-like)
+- JavaScript (vanilla)
+- Node.js + Express (backend)
+- API: https://restcountries.com/
+
+---
+
+## 🗂 Estructura
 
