@@ -126,6 +126,17 @@ function mostrarResultado() {
       <button onclick="reiniciarJuego()" style="margin-top: 1rem; background-color: #1e3a8a; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; border: none;">🔁 Volver a jugar</button>
     </div>
   `;
+  fetch("/ranking", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    nombre: prompt("Ingresa tu nombre para el ranking:") || "Anónimo",
+    puntaje: correctas * 3 + preguntasDeBandera * 2,  // ajustá esto si querés puntaje real
+    correctas: correctas,
+    tiempoTotal: duracion
+  })
+});
+
 }
 
 function reiniciarJuego() {
