@@ -49,3 +49,14 @@ quiz-paises/
 ├── server.js
 ├── package.json
 ├── README.md
+
+
+---
+
+## 🧪 Cómo ejecutar localmente
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/valenxo/QuizPaises.git
+cd QuizPaises
